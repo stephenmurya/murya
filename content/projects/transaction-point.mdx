@@ -1,0 +1,43 @@
+---
+title: "Transaction Point"
+category: "Product Design"
+year: "2023-2024"
+status: "Live (bespoke deployment per institution)"
+summary: "Transaction Point is a white-label mobile banking product for microfinance banks that lack the technical capacity to build their own applications. The core design challenge was not building one banking app, it was building a system that could become many different banking apps without any of them looking like they share the same origin."
+stack:
+  - "Fintech"
+  - "White-label"
+  - "B2B"
+coverImage: "/projects/transaction-point/cover.svg"
+client: "Aggregate Business Solution"
+metadataCategory: "Fintech, White-label, B2B"
+images: []
+imageAlts: []
+order: 8
+---
+
+## Overview
+
+Transaction Point is a white-label mobile banking product for microfinance banks that lack the technical capacity to build their own applications. The core design challenge was not building one banking app, it was building a system that could become many different banking apps without any of them looking like they share the same origin.
+
+## The Design Problem
+
+A white-label banking product that visibly looks the same across multiple institutions fails its primary value proposition. Each MFB has its own brand identity, color system, and customer expectations. The design had to absorb that variation without producing broken or clashing results.
+
+The primary risk was color. Financial institutions have their own brand colors, and not every pair of primary and secondary colors will produce a coherent interface. A product that uses color heavily will break under a bank whose brand colors are high-contrast or unconventional. The solution was to use color with strategic restraint: limiting the surfaces where brand color appeared, defining clear rules for where primary and secondary colors could and could not be used simultaneously, and testing the system against the most challenging color combinations we could anticipate.
+
+## The Distribution Problem
+
+Early in the project, the team considered distributing the app through a single app store listing where users would select their bank at the point of sign-in. I designed and tested several approaches to this: a bank selection screen at onboarding, a code-based entry system, and a subdomain model. Each approach introduced friction that disproportionately affected users with low digital literacy, the primary customer base of the MFBs we were serving.
+
+The final decision was bespoke deployment: each bank receives its own app store listing, fully customized to their brand. A user searches for their bank by name and downloads an app that looks and behaves like it was built for that bank specifically. This was the right call. The onboarding friction is eliminated, and the product credibility of each institution is protected.
+
+## Outcomes
+
+Nine microfinance banks onboarded to the platform
+
+Over 200,000 users across deployed instances
+
+Brand identity and logo design for Transaction Point
+
+Design system built to absorb institutional color variation without requiring per-client redesign work

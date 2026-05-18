@@ -1,0 +1,34 @@
+---
+title: "BAGIS (Bauchi Geographic Information System)"
+category: "Product Design"
+year: "2022-2023"
+status: "Live and operational"
+summary: "BAGIS is a government land administration system that digitizes processes that were previously handled entirely manually. The goal was to reduce administrative overhead, improve record accuracy, and give citizens a path to complete land-related transactions digitally."
+stack:
+  - "GovTech"
+  - "Enterprise"
+coverImage: "/projects/bagis/cover.svg"
+client: "Bauchi State Government"
+metadataCategory: "GovTech, Enterprise"
+images: []
+imageAlts: []
+order: 12
+---
+
+## Overview
+
+BAGIS is a government land administration system that digitizes processes that were previously handled entirely manually. The goal was to reduce administrative overhead, improve record accuracy, and give citizens a path to complete land-related transactions digitally.
+
+## Designing Within Bureaucratic Constraints
+
+Government digitization projects rarely allow designers to optimize for efficiency alone. The client required that manual verification and approval steps be preserved even where automation was technically straightforward. For example, a land rent payment that could technically be completed in a few clicks was required to go through a manual verification step handled by a separate user type, with a dedicated dashboard to support that verification workflow.
+
+This produced a system that is more complex than the underlying process needs to be, but it reflects a real organisational constraint: the client needed to retain human oversight of processes that carry legal and financial weight. Rather than designing against this requirement, I designed for it. Each user type, from applicants to administrators to verification staff, received a purpose-built interface with visibility limited to what their role required.
+
+## Role-Based Interface Design
+
+The project required separate, fully designed dashboards for each user type, all of which were reviewed by the client before development. RBAC could have handled access control in code, but the client needed to see and approve each role-specific interface explicitly. I designed each dashboard with the specific task set of that role in mind, rather than using a single interface with hidden elements per role, which produced more appropriate cognitive load at each level.
+
+## Outcome
+
+The system is live and operational within Bauchi State. Impact metrics are not available due to government data restrictions.
