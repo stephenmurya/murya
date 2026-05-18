@@ -58,10 +58,18 @@ const placeholderProjectSlugs = [
   "grenade-architect",
   "recoil-shooter",
   "transaction-point",
-  "bagis",
 ];
 
 const localProjectAssets: ProjectAssetManifest[] = [
+  {
+    slug: "bagis",
+    galleryLocalAssets: [
+      {
+        source: "public/projects/bagis/cover.png",
+        filename: "01-cover.png",
+      },
+    ],
+  },
   {
     slug: "uber-one-banking",
     localCover: {
