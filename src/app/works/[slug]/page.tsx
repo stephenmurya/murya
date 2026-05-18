@@ -6,6 +6,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { getPublicImagePaths } from "@/lib/public-assets";
 import { getProject, getProjectSummaries } from "@/lib/projects";
+import { getProjectJsonLd, stringifyJsonLd } from "@/lib/seo";
 import { siteConfig } from "@/lib/site";
 
 type ProjectPageProps = {
@@ -30,22 +31,24 @@ export async function generateMetadata({
 
   if (!project) {
     return {
-      title: "Project Not Found | Smiz",
+      title: "Project Not Found | Stephen Murya",
     };
   }
 
-  const socialImage = project.coverImage.endsWith(".svg")
-    ? "/opengraph-image"
-    : project.coverImage;
+  const socialImage = `/works/${project.slug}/opengraph-image`;
 
   return {
     title: project.title,
     description: project.summary,
+    alternates: {
+      canonical: `/works/${project.slug}`,
+    },
     openGraph: {
-      title: `${project.title} | Smiz`,
+      title: `${project.title} | Stephen Murya`,
       description: project.summary,
       url: `/works/${project.slug}`,
       siteName: siteConfig.name,
+      locale: "en_US",
       type: "article",
       images: [
         {
@@ -58,7 +61,7 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title: `${project.title} | Smiz`,
+      title: `${project.title} | Stephen Murya`,
       description: project.summary,
       images: [socialImage],
     },
@@ -74,10 +77,15 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   }
 
   const galleryImages = getPublicImagePaths("projects", project.slug, "gallery");
+  const jsonLd = getProjectJsonLd(project);
 
   return (
     <div className="min-h-screen bg-black text-white">
       <SiteHeader />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: stringifyJsonLd(jsonLd) }}
+      />
       <ProjectDetail project={project} galleryImages={galleryImages} />
       <SiteFooter />
     </div>

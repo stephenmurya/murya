@@ -53,14 +53,26 @@ const placeholderProjectSlugs = [
   "tethrai",
   "revoke",
   "tether-cold-light",
-  "size-matters",
-  "tactical-farmer",
   "grenade-architect",
   "recoil-shooter",
   "transaction-point",
 ];
 
 const localProjectAssets: ProjectAssetManifest[] = [
+  {
+    slug: "size-matters",
+    localCover: {
+      source: "public/projects/size-matters/gallery/Header Image.png",
+      filename: "cover.png",
+    },
+  },
+  {
+    slug: "tactical-farmer",
+    localCover: {
+      source: "public/projects/tactical-farmer/gallery/Header Image.png",
+      filename: "cover.png",
+    },
+  },
   {
     slug: "bagis",
     galleryLocalAssets: [

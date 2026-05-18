@@ -4,6 +4,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Geist, Geist_Mono, Instrument_Serif } from "next/font/google";
 
 import { LenisProvider } from "@/components/lenis-provider";
+import { getRootJsonLd, stringifyJsonLd } from "@/lib/seo";
 import { siteConfig } from "@/lib/site";
 import "./globals.css";
 
@@ -29,7 +30,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
     default: siteConfig.title,
-    template: `%s | ${siteConfig.name}`,
+    template: "%s | Stephen Murya",
   },
   description: siteConfig.description,
   alternates: {
@@ -40,13 +41,14 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     url: "/",
     siteName: siteConfig.name,
+    locale: "en_US",
     type: "website",
     images: [
       {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "Smiz portfolio",
+        alt: "Stephen Murya portfolio",
       },
     ],
   },
@@ -63,12 +65,18 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = getRootJsonLd();
+
   return (
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${instrumentSerif.variable} h-full antialiased`}
     >
       <body className="bg-black font-sans text-white">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: stringifyJsonLd(jsonLd) }}
+        />
         <LenisProvider>{children}</LenisProvider>
         <Analytics />
         <SpeedInsights />
