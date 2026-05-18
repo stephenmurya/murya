@@ -9,7 +9,7 @@ type ProjectLinkCardProps = {
 };
 
 export function ProjectLinkCard({ project }: ProjectLinkCardProps) {
-  const hasMedia = project.images.length > 0;
+  const hasMedia = !project.coverImage.endsWith(".svg");
 
   return (
     <Link

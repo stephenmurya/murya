@@ -25,18 +25,3 @@ export type ProjectSummary = {
 export type Project = ProjectSummary & {
   content: string;
 };
-
-export const stackGroups = [
-  {
-    title: "Engines",
-    items: ["Unreal Engine 5", "C++"],
-  },
-  {
-    title: "Systems",
-    items: ["React", "Next.js", "PostgreSQL"],
-  },
-  {
-    title: "Design",
-    items: ["UI/UX Engineering", "Modular Systems"],
-  },
-];

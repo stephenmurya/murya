@@ -56,7 +56,7 @@ export default function OpenGraphImage() {
             textAlign: "right",
           }}
         >
-          Game Developer & Product Designer
+          Product Designer & Systems Architect
         </div>
       </div>
     ),

@@ -59,11 +59,15 @@ export function WebGLShader() {
         float gx = p.x;
         float bx = p.x * (1.0 - d);
 
-        float r = 0.05 / abs(p.y + sin((rx + time) * xScale) * yScale);
-        float g = 0.05 / abs(p.y + sin((gx + time) * xScale) * yScale);
-        float b = 0.05 / abs(p.y + sin((bx + time) * xScale) * yScale);
+        float redWave = 0.035 / abs(p.y + sin((rx + time) * xScale) * yScale);
+        float blueWave = 0.035 / abs(p.y + sin((bx - time * 0.75) * (xScale + 0.35)) * (yScale * 0.72));
+        float greenWave = 0.022 / abs(p.y + sin((gx + time * 0.45) * (xScale + 0.65)) * (yScale * 0.54));
 
-        gl_FragColor = vec4(r, g, b, 1.0);
+        vec3 color = redWave * vec3(0.85, 0.18, 0.12);
+        color += blueWave * vec3(0.12, 0.42, 0.95);
+        color += greenWave * vec3(0.28, 0.78, 0.48);
+
+        gl_FragColor = vec4(min(color, vec3(1.0)), 1.0);
       }
     `;
 
@@ -151,7 +155,7 @@ export function WebGLShader() {
     <canvas
       ref={canvasRef}
       aria-hidden="true"
-      className="pointer-events-none absolute inset-0 block h-full w-full opacity-20 grayscale contrast-125"
+      className="pointer-events-none absolute inset-0 block h-full w-full opacity-45"
     />
   );
 }

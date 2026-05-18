@@ -8,7 +8,6 @@ import { z } from "zod";
 
 import {
   projectCategories,
-  stackGroups,
   type Project,
   type ProjectSummary,
 } from "@/lib/project-types";
@@ -32,7 +31,7 @@ export const projectFrontmatterSchema = z
   })
   .strict();
 
-export { projectCategories, stackGroups };
+export { projectCategories };
 export type { Project, ProjectCategory, ProjectSummary } from "@/lib/project-types";
 
 function getProjectSlugs() {

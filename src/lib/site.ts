@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "Smiz",
-  title: "Smiz | Game Developer & Product Designer",
+  title: "Smiz | Product Designer & Systems Architect",
   description:
-    "Stephen Murya's portfolio for game development, product design, and systems-led frontend architecture.",
+    "Stephen Murya designs clear product experiences, scalable design systems, and interfaces for complex software.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://smiz.dev",
 };

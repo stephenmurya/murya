@@ -19,7 +19,7 @@ export function HeroActions() {
         </span>
       </button>
       <a
-        href="mailto:hello@smiz.dev"
+        href="mailto:stephenmurya@gmail.com"
         className="inline-flex h-12 items-center justify-center border border-[#27272a] px-6 text-sm text-zinc-300 transition-colors duration-300 hover:border-white/60 hover:text-white"
       >
         Professional Inquiry

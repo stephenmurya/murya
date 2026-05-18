@@ -1,9 +1,9 @@
-import { BriefcaseBusiness, Code2, Mail } from "lucide-react";
+import { BriefcaseBusiness, Code2, Download, Mail } from "lucide-react";
 
 const contactLinks = [
   {
     label: "Email",
-    href: "mailto:hello@smiz.dev",
+    href: "mailto:stephenmurya@gmail.com",
     icon: Mail,
   },
   {
@@ -13,7 +13,7 @@ const contactLinks = [
   },
   {
     label: "GitHub",
-    href: "https://github.com/smiz",
+    href: "https://github.com/stephenmurya",
     icon: Code2,
   },
 ];
@@ -25,9 +25,16 @@ export function SiteFooter() {
         <div className="max-w-xl">
           <h2 className="font-serif text-4xl text-white">Contact</h2>
           <p className="mt-4 text-sm leading-6 text-zinc-400">
-            Available for product design, frontend systems, game development,
-            and high-fidelity interface work.
+            Available for product design, design systems, and interface
+            architecture for complex software.
           </p>
+          <a
+            href="/cv.pdf"
+            className="mt-6 inline-flex items-center gap-2 border border-white bg-white px-5 py-3 text-sm text-black transition-colors duration-300 hover:bg-black hover:text-white"
+          >
+            <Download aria-hidden="true" className="size-4" />
+            Download my CV
+          </a>
         </div>
         <div className="flex flex-col gap-3 sm:flex-row md:items-end">
           {contactLinks.map((link) => {

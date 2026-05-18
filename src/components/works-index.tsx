@@ -12,9 +12,8 @@ export function WorksIndex() {
             Selected Works
           </h1>
           <p className="max-w-2xl self-end text-base leading-7 text-zinc-400 md:text-lg">
-            A focused index of product systems, game mechanics, and interfaces
-            shaped around the same operating principle: build the structure,
-            test it in motion, and refine from contact with reality.
+            Case studies in simplifying complex workflows, aligning product
+            teams, and designing software people can use with confidence.
           </p>
         </div>
 

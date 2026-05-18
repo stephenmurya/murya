@@ -10,11 +10,11 @@
     "migrate:assets": "tsx scripts/migrate-assets.ts"
   },
   "dependencies": {
-    "@studio-freight/react-lenis": "^0.0.47",
     "@vercel/analytics": "^2.0.1",
     "@vercel/speed-insights": "^2.0.0",
     "clsx": "^2.1.1",
     "gray-matter": "^4.0.3",
+    "lenis": "^1.3.23",
     "lucide-react": "^1.16.0",
     "next": "16.2.6",
     "next-mdx-remote": "^6.0.0",

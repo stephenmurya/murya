@@ -4,8 +4,6 @@ import { ArrowUpRight } from "lucide-react";
 const navItems = [
   { href: "/", label: "Home" },
   { href: "/works", label: "Works" },
-  { href: "/#philosophy", label: "Philosophy" },
-  { href: "/#stack", label: "Stack" },
 ];
 
 export function SiteHeader() {
@@ -34,7 +32,7 @@ export function SiteHeader() {
           ))}
         </nav>
         <a
-          href="mailto:hello@smiz.dev"
+          href="mailto:stephenmurya@gmail.com"
           className="inline-flex items-center gap-2 border border-[#27272a] px-3 py-2 text-xs uppercase text-zinc-300 transition-colors duration-300 hover:border-white/60 hover:text-white"
         >
           Contact

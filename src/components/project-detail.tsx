@@ -8,6 +8,7 @@ import type { Project } from "@/lib/project-types";
 
 type ProjectDetailProps = {
   project: Project;
+  galleryImages: string[];
 };
 
 type MdxSection = {
@@ -49,8 +50,12 @@ function splitMdxSections(content: string): MdxSection[] {
       ];
 }
 
-export function ProjectDetail({ project }: ProjectDetailProps) {
+export function ProjectDetail({ project, galleryImages }: ProjectDetailProps) {
   const sections = splitMdxSections(project.content);
+  const imageAlts = galleryImages.map(
+    (_image, index) =>
+      project.imageAlts[index] ?? `${project.title} project image ${index + 1}`,
+  );
 
   return (
     <main className="min-h-screen bg-black pt-24">
@@ -94,8 +99,8 @@ export function ProjectDetail({ project }: ProjectDetailProps) {
         <figure className="py-12 md:py-16">
           <ProjectMediaSlider
             title={project.title}
-            images={project.images}
-            imageAlts={project.imageAlts}
+            images={galleryImages}
+            imageAlts={imageAlts}
           />
         </figure>
 

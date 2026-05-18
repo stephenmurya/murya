@@ -3,6 +3,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Geist, Geist_Mono, Instrument_Serif } from "next/font/google";
 
+import { LenisProvider } from "@/components/lenis-provider";
 import { siteConfig } from "@/lib/site";
 import "./globals.css";
 
@@ -67,8 +68,8 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${instrumentSerif.variable} h-full antialiased`}
     >
-      <body className="flex min-h-full flex-col bg-black font-sans text-white">
-        {children}
+      <body className="bg-black font-sans text-white">
+        <LenisProvider>{children}</LenisProvider>
         <Analytics />
         <SpeedInsights />
       </body>

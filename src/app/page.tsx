@@ -1,16 +1,19 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
+import { ExperienceSection } from "@/components/experience-section";
 import { HeroActions } from "@/components/hero-actions";
 import { HeroShader } from "@/components/hero-shader";
+import { LogoMarquee } from "@/components/logo-marquee";
 import { ProjectTabs } from "@/components/project-tabs";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { getPublicImagePaths } from "@/lib/public-assets";
 import { getProjectSummaries } from "@/lib/projects";
-import { stackGroups } from "@/lib/project-types";
 
 export default function Home() {
   const projects = getProjectSummaries();
+  const logos = getPublicImagePaths("logos");
 
   return (
     <div className="min-h-screen bg-black text-white">
@@ -26,15 +29,11 @@ export default function Home() {
                 Smiz
               </h1>
               <p className="mt-6 max-w-3xl text-2xl leading-9 text-white md:text-4xl md:leading-10">
-                Game Developer & Product Designer.
+                Product Designer & Systems Architect.
               </p>
               <p className="mt-8 max-w-3xl text-base leading-7 text-zinc-300 md:text-xl md:leading-8">
-                Building{" "}
-                <em className="font-serif text-2xl italic text-white md:text-3xl">
-                  durable
-                </em>
-                , self-improving systems at the intersection of kinetic action
-                and modular architecture.
+                I design clear product experiences, scalable interface systems,
+                and software people can understand quickly.
               </p>
               <div className="mt-10">
                 <HeroActions />
@@ -43,28 +42,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section
-          id="philosophy"
-          className="mx-auto grid w-full max-w-7xl gap-10 px-4 py-20 sm:px-6 md:grid-cols-[0.8fr_1.2fr] lg:px-8"
-        >
-          <div>
-            <h2 className="font-serif text-5xl text-white md:text-7xl">
-              Kinetic Architect
-            </h2>
-          </div>
-          <div className="max-w-3xl">
-            <p className="text-lg leading-8 text-zinc-300 md:text-xl md:leading-9">
-              My work moves from theoretical planning to active execution
-              through systems-led thinking. I design structures that can be
-              tested in motion: products with clear data models, games with
-              legible kinetic loops, and interfaces where every boundary earns
-              its place.
-            </p>
-            <blockquote className="mt-8 border-l border-[#27272a] pl-6 font-serif text-3xl italic leading-10 text-white">
-              Plan the system, then let contact with motion refine it.
-            </blockquote>
-          </div>
-        </section>
+        <LogoMarquee logos={logos} />
 
         <section className="border-y border-[#27272a] bg-[#09090b]/70">
           <div className="mx-auto w-full max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
@@ -74,8 +52,8 @@ export default function Home() {
                   Selected Works
                 </h2>
                 <p className="mt-4 max-w-2xl text-base leading-7 text-zinc-400">
-                  A strict grid of systems, products, and game work built around
-                  durable architecture.
+                  Interfaces, design systems, and product flows shaped for
+                  clarity, adoption, and long-term use.
                 </p>
               </div>
               <Link
@@ -92,33 +70,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section
-          id="stack"
-          className="mx-auto w-full max-w-7xl px-4 py-20 sm:px-6 lg:px-8"
-        >
-          <h2 className="font-serif text-5xl text-white md:text-7xl">
-            Technical Stack
-          </h2>
-          <div className="mt-10 grid gap-4 md:grid-cols-3">
-            {stackGroups.map((group) => (
-              <div
-                key={group.title}
-                className="border border-[#27272a] bg-[#09090b] p-6"
-              >
-                <h3 className="text-xs uppercase text-zinc-500">
-                  {group.title}
-                </h3>
-                <ul className="mt-8 flex flex-col gap-4">
-                  {group.items.map((item) => (
-                    <li key={item} className="text-lg text-white">
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </section>
+        <ExperienceSection />
       </main>
       <SiteFooter />
     </div>
