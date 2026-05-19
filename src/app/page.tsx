@@ -24,9 +24,9 @@ export default function Home() {
           <div className="absolute inset-0 bg-black/70" aria-hidden="true" />
           <div className="relative z-10 mx-auto flex min-h-[88svh] w-full max-w-7xl flex-col justify-end px-4 pb-16 pt-32 sm:px-6 lg:px-8">
             <div className="max-w-5xl">
-              <p className="mb-6 text-sm text-zinc-400">Stephen Murya</p>
+              <p className="mb-6 text-sm text-zinc-400">Smiz</p>
               <h1 className="font-serif text-7xl leading-none text-white md:text-9xl">
-                Smiz
+                Stephen Murya
               </h1>
               <p className="mt-6 max-w-3xl text-2xl leading-9 text-white md:text-4xl md:leading-10">
                 Product Designer & Systems Architect.
