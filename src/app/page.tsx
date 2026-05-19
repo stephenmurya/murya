@@ -32,8 +32,8 @@ export default function Home() {
                 Product Designer & Systems Architect.
               </p>
               <p className="mt-8 max-w-3xl text-base leading-7 text-zinc-300 md:text-xl md:leading-8">
-                I tackle systemic complexity—from regulated fintech infrastructure to game 
-                development—where the challenge is architecture, not interface. 
+                I tackle systemic complexity, from regulated fintech infrastructure to game 
+                development, where the challenge is architecture, not interface. 
                 My principle across both: architect the foundation, then refine through real-world friction.
               </p>
               <div className="mt-10">
