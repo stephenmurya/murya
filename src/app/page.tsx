@@ -32,8 +32,11 @@ export default function Home() {
                 Product Designer & Systems Architect.
               </p>
               <p className="mt-8 max-w-3xl text-base leading-7 text-zinc-300 md:text-xl md:leading-8">
-                I design clear product experiences, scalable interface systems,
-                and software people can understand quickly.
+                I design for complexity: regulated fintech workflows, white-label banking infrastructure, 
+                B2B platforms where the hard part is never the interface. I also build games, 
+                because games are where systems get stress-tested fastest. <br></br><br></br>
+                The operating principle across both: plan the structure, then let contact with 
+                the real world do the refining.
               </p>
               <div className="mt-10">
                 <HeroActions />
@@ -53,7 +56,7 @@ export default function Home() {
                 </h2>
                 <p className="mt-4 max-w-2xl text-base leading-7 text-zinc-400">
                   Interfaces, design systems, and product flows shaped for
-                  clarity, adoption, and long-term use.
+                  clarity, adoption, and long-term use. 
                 </p>
               </div>
               <Link
