@@ -32,11 +32,9 @@ export default function Home() {
                 Product Designer & Systems Architect.
               </p>
               <p className="mt-8 max-w-3xl text-base leading-7 text-zinc-300 md:text-xl md:leading-8">
-                I design for complexity: regulated fintech workflows, white-label banking infrastructure, 
-                B2B platforms where the hard part is never the interface. I also build games, 
-                because games are where systems get stress-tested fastest. <br></br><br></br>
-                The operating principle across both: plan the structure, then let contact with 
-                the real world do the refining.
+                I tackle systemic complexity—from regulated fintech infrastructure to game 
+                development—where the challenge is architecture, not interface. 
+                My principle across both: architect the foundation, then refine through real-world friction.
               </p>
               <div className="mt-10">
                 <HeroActions />
