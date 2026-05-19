@@ -8,8 +8,8 @@ export function ExperienceSection() {
           Experience
         </h2>
         <p className="max-w-2xl self-end text-base leading-7 text-zinc-400 md:text-lg">
-          Product design roles across B2B SaaS, fintech, enterprise platforms,
-          and education technology, focused on complex workflows, clear systems,
+          Product design roles across B2B SaaS, fintech and enterprise platforms, 
+          focused on complex workflows, clear systems,
           and measurable product impact.
         </p>
       </div>
