@@ -8,7 +8,7 @@ const validImageExtensions = new Set([".png", ".jpg", ".jpeg", ".svg", ".webp"])
 function getImageSortWeight(filename: string) {
   const normalizedFilename = filename.toLowerCase();
 
-  if (normalizedFilename.includes("header")) return 0;
+  if (normalizedFilename.startsWith("header")) return 0;
   if (normalizedFilename.startsWith("cover")) return 1;
 
   return 2;
