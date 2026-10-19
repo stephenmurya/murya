@@ -1,7 +1,22 @@
 # STATUS: Smiz Portfolio
 
 - Current Phase: PRD
-- Last Updated: 18 May 2026
+- Last Updated: 19 October 2026
+
+## Cuelio integration operations
+
+Production activation evidence is recorded in
+[`cuelio-operations.md`](cuelio-operations.md). On 2026-10-19, Cuelio's
+application and events Worker versions were activated at the documented
+production versions, with the `MURYA_CONTROL_PLANE` binding targeting
+`murya-control-plane`. Delivery and retention are enabled; two scheduled
+events plus the activation smoke were validated with zero retries, dead
+letters, quarantine, or duplicate groups, and public smokes returned 200.
+
+Founder credential rotation completed through a one-time controlled process:
+old sessions and revocable verification state were cleared while the sole
+Owner, identity, credential, verified TOTP, and immutable claim were preserved.
+The temporary rotation utility was not retained after security review.
 
 ## Phase History
 
