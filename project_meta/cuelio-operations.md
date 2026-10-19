@@ -42,24 +42,3 @@ copy secret or event-level evidence into either repository.
 | --- | --- | --- | --- |
 | 2026-10-19 | Cuelio event activation | Complete; two scheduled deliveries and activation smoke validated | Aggregate health monitoring |
 | 2026-10-19 | Founder credential rotation | Complete; sessions and revocable verification state cleared; Owner/identity/TOTP/immutable claim preserved | No retained rotation utility |
-
-## Follow-up P9 producer rollout — staged, not activated
-
-On 2026-10-19, Cuelio deployed the reviewed producer artifacts while keeping
-the events Worker disabled pending guarded activation:
-
-| Service | Current 100% version |
-| --- | --- |
-| `cuelio` | `9b18b0eb-9545-4fa0-a3d1-ff3149cef7f0` |
-| `cuelio-murya-events` | `a92d1e32-492c-4089-9d5d-4c988e13e770` |
-| `cuelio-media` | `cb487994-97b2-4b1c-a5bc-9ea1abade30f` |
-| `cuelio-ai` | `59622ba4-6b41-41ce-9920-e6fde1f26dcd` |
-
-The read-only production preflight remained quiescent: no nonterminal outbox
-rows, active jobs, processing transcripts, or unsettled reservations; the
-Neon migration checkpoint was 31. Public and unauthenticated boundary smokes
-passed. The current Murya checkout does not contain the documented
-`events:activate:check` and `events:activate` guarded commands, so activation
-was intentionally stopped and no event delivery or analytics persistence
-claim is made for this staged deployment. Restore the reviewed activation
-tooling before enabling delivery; do not manually toggle the Worker.
